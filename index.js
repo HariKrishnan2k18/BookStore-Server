@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://lambent-arithmetic-1ff4ee.netlify.app",
     credentials: true
   })
 );
