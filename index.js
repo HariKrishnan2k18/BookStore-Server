@@ -4,6 +4,7 @@ import express from "express";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import bookRoutes from "./routes/bookRoutes.js";
+import YoutubeRoutes from "./routes/YTRoutes.js";
 
 const app = express();
 app.use(express.json());
@@ -20,6 +21,7 @@ connectDB();
 
 app.use("/login", authRoutes);
 app.use("/books", bookRoutes);
+app.use("/YTvideo", YoutubeRoutes);
 
 const PORT = 8000;
 app.listen(PORT, () => {
